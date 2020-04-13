@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from argparse import ArgumentParser
 from analysis import *
-from graficos import *
+from barcharts import *
 from analysis2 import *
-
+from exportemail import *
 
 def parse():
     parser=ArgumentParser(description="Este programa es para buscar los 10 mejores tenistas para cada torneo y año seleccionado")
@@ -24,11 +24,11 @@ def main():
     filtered = filters(data,year,tour)
     results = analysis(filtered)
     barchart = visualize(results,tour,year)
-    save_chart(barchart,tour,year)
+    save_chart(barchart)
     filtered2 = filters2(data)
     results2 = analysis2(filtered2)
     winners_data = acquire2()
+    send_email(results2,winners_data)
     
 if __name__ == '__main__':
     main()
-

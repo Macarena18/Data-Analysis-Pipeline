@@ -6,14 +6,7 @@ def acquire():
 
 def filters(df,year,tour):
     filtered=df[(df["Year"]==year)&(df["Tournament"]==tour)]
-    if year not in df["Year"]:
-        print("No es posible realizar el análisis de este año. Por favor, incluye 2017,2018 o 2019.")
-    else:
-        print(filtered)
-    if tour not in df["Tournament"]:
-        print("No es posible realizar el análisis de este torneo. Por favor, incluye AustralianOpen, RolandGarros, Wimbledon,USOpen.")
-    else:
-        print(filtered)
+    print(filtered)
     return filtered
 
 def analysis(df):

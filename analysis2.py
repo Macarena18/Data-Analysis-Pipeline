@@ -10,7 +10,6 @@ def analysis2(df):
     grouped2=df.groupby("Winner").agg({"Round":"count","Total_games":"mean","Total_sets":"mean"})
     results2=grouped2.sort_values("Round",ascending=False)
     print("Estos son los ganadores de Grand Slams de los últimos años (2017,2018,2019) con el número total de titulos(Round), media de juegos por partido y media de sets jugados:")
-    print(results2)
     return results2
 
 def acquire2():
