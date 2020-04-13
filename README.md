@@ -27,9 +27,10 @@ Por último, procedo a crear un programa de python (main.py) para generar el an�
 
 Este programa va a generar:
 - Gráfica con los 10 tenistas con mejores resultados en cada torneo (con más victorias)
-- Imagen guardad de la gráfica
+- Imagen guardada de la gráfica
 - Dataframe con el nombre de los tenistas ganadores de los últimos GrandSlams y la media de sets y juegos disputados por cada jugador.
 - De estos jugadores, dataframe con sus datos personales (Nacionalidad,Fecha de nacimiento, Altura y Ganancias).
+- Envío de email usando la librería de  python `smtplib`. 
 
 
 
